@@ -12,4 +12,3 @@
 - Downloaded nes-py from : https://github.com/Kautenja/nes-py
 - Installed gym-contra from : https://pypi.org/project/gym-contra/
 - Ran test code, seems to be working fine
-
