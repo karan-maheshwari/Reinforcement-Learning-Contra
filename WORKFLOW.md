@@ -17,5 +17,6 @@
 - https://medium.com/coinmonks/landing-a-rocket-with-simple-reinforcement-learning-3a0265f8b58c
 - https://towardsdatascience.com/atari-reinforcement-learning-in-depth-part-1-ddqn-ceaa762a546f
 - https://pypi.org/project/gym-contra/ (Provides better understanding of contra-gym)
+- https://medium.com/aureliantactics/beating-easy-mode-on-contra-iii-with-reinforcement-learning-part-1-introduction-f004562f9840
 
 
