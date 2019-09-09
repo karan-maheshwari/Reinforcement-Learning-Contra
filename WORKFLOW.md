@@ -20,3 +20,12 @@
 - https://medium.com/aureliantactics/beating-easy-mode-on-contra-iii-with-reinforcement-learning-part-1-introduction-f004562f9840
 
 
+# Gameplay Links:
+
+- https://www.youtube.com/watch?v=2mWZlNOzdv8
+- https://www.youtube.com/watch?v=k7vcUei5u2E
+- https://www.youtube.com/watch?v=4JqayVd48FI
+- https://www.youtube.com/watch?v=6bY9KNs6uq4
+
+
+
