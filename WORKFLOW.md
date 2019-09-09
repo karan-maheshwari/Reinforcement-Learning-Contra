@@ -8,6 +8,7 @@
 
 ## Links to go through:
 
+- https://spinningup.openai.com/en/latest/spinningup/rl_intro2.html
 - https://github.com/keras-rl/keras-rl
 - https://towardsdatascience.com/welcome-to-deep-reinforcement-learning-part-1-dqn-c3cab4d41b6b
 - https://gym.openai.com/docs/ (Provides better understanding of gym)
@@ -26,6 +27,8 @@
 - https://www.youtube.com/watch?v=k7vcUei5u2E
 - https://www.youtube.com/watch?v=4JqayVd48FI
 - https://www.youtube.com/watch?v=6bY9KNs6uq4
+
+
 
 
 
