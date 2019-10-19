@@ -8,9 +8,7 @@ CUSTOM_MOVEMENT = [
    ['right', 'A', 'B', 'up'],
    ['B'],
    ['A', 'B'],
-   ['down', 'A'],
    ['down', 'B'],
-   ['down', 'A', 'B'],
    ['up', 'A'],
    ['up', 'A', 'B'],
 ]

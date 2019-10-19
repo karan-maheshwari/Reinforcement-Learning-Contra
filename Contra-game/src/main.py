@@ -65,20 +65,20 @@ print(model.summary())
 
 memory = SequentialMemory(limit=5000, window_length=1)
 policy = BoltzmannQPolicy()
-dqn = DQNAgent(model=model, nb_actions=nb_actions, memory=memory, nb_steps_warmup=10,
-               target_model_update=1e-2, policy=policy, enable_double_dqn=True, enable_dueling_network=False, dueling_type='avg')
-dqn.compile(Adam(lr=1e-3), metrics=['mae'])
+dqn = DQNAgent(model=model, nb_actions=nb_actions, memory=memory, nb_steps_warmup=10, target_model_update=1e-2, policy=policy)
+dqn.compile(Adam(lr=1e-3), metrics=['mae','acc'])
 
 weights_filename = '../logs/dqn_contra_weights.h5f'
 # checkpoint_weights_filename = 'dqn_contra_weights_step.h5f'
 # log_filename = 'dqn_contra_log.json'
 
-tensorboard = TensorBoard(log_dir="../tensorboard-logs/{}".format(time()))
+tensorboard = TensorBoard(log_dir="../tensorboard-logs/{}".format(time()), histogram_freq=0, write_graph=True, write_images=True, embeddings_freq=0,
+  embeddings_layer_names=None, embeddings_metadata=None)
 
 # callbacks = [ModelIntervalCheckpoint(checkpoint_weights_filename, interval=250)]
 # callbacks += [FileLogger(log_filename, interval=100)]
 
-dqn.fit(env, callbacks=[tensorboard], nb_steps=5000, log_interval=100, visualize=True, verbose=1)
+training_history = dqn.fit(env, callbacks=[tensorboard], nb_steps=1000, log_interval=100, visualize=True, verbose=1, nb_max_episode_steps=1000)
 
 
 # After training is done, we save the final weights.
@@ -90,4 +90,5 @@ dqn.save_weights(weights_filename, overwrite=True)
 
 
 # Finally, evaluate our algorithm for 5 episodes.
-dqn.test(env, nb_episodes=5, visualize=True)
+# add -> nb_max_episode_steps=5000
+dqn.test(env, nb_episodes=5, visualize=True, nb_max_episode_steps=1000)
